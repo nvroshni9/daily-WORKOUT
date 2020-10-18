@@ -29,3 +29,36 @@ int isArmstrong(int x){
     
     int D,sum=0,temp;
     D=order(x);
+ temp=x;
+    while(temp){
+        int a=temp%10;
+        sum+=power(a,D);
+        std::cout<<"sum"<<sum;
+        temp=temp/10;
+    }
+    
+    std::cout<<sum;
+    if (sum==x)
+        return 1;
+    else
+        return 0;
+    
+    
+    
+}
+    
+    
+
+
+int main()
+{
+    int x,y;
+    std::cin>>x;
+    
+    y=isArmstrong(x);
+    if (y==0)
+    printf("not armstrong");
+    else
+    printf("armstrong");
+    
+}
